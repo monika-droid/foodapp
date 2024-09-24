@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './DisplayFoodItem.css'
-import { StoreContext } from '../../context/StoreContext'
 import FoodItem from '../FoodItem/FoodItem';
+import { StoreContext } from '../../context/storeContext';
 const DisplayFoodItem = ({category}) => {
     const {food_list} = useContext(StoreContext);
     if (!food_list) {
@@ -13,6 +13,7 @@ const DisplayFoodItem = ({category}) => {
       <h2>Most Popular Dishes</h2>
       <div className="foodDisplayList">
         {food_list.map((item, index)=>{
+          if(category === "All" || category === item.category) 
           return <FoodItem key={index} id={item.name} name={item.name} description={item.description} image={item.image} price={item.price}/>
         })}
       </div>

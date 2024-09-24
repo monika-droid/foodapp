@@ -1,0 +1,11 @@
+.Footer{
+    margin: 120px;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.centerContent{
+    margin-left: 100px;
+}
