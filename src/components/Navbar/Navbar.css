@@ -6,7 +6,8 @@
 }
 
 .navbar .logo{
-    width: 150px;
+    width: 80px;
+    margin-left: 100px;
 }
 .navbar-menu{
     display: flex;
@@ -20,12 +21,15 @@
     align-items: center;
     gap: 30px;
 }
-
+.navbar-right .material-symbols-outlined{
+    font-size: 32px;
+    color: #4e4747;
+}
 .navbar button{
     background: transparent;
     font-size: 16px;
     color: black;
-    border: 1px solid  tomato;
+    border: 1px solid  black;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;    
@@ -44,16 +48,6 @@
 
 .navbar-search-icon{
     position: relative;
-}
-.navbar-search-icon .dot{
-    position: absolute;
-    top:-8px;
-    right: -8px;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: tomato;
-    border-radius: 5px;
-    
 }
 
 @media (max-width: 1050px) {

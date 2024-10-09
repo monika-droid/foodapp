@@ -1,10 +1,11 @@
 .header {
-    height: 34vw;
+    height: 28vw;
     max-width: 30px auto;
     border-radius: 30px;
-    background: url('../../assets/header_img1.png');
+    background: url('../../assets/img.png');
     background-size: contain;
     position: relative;
+    background-repeat: no-repeat;
 }
 .header-content {
     position: absolute;

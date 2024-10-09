@@ -15,13 +15,12 @@ const FoodItem = ({ id, name, price, description, image }) => {
       <div className="itemInfo">
         <div className="ratingandname">
           <p>{name}</p>
-          <img src={assets.rating_starts} alt="Rating" />
         </div>
         <p className='description'>{description}</p>
         <div className='priceandicon'>
           <p className='price'>${price}</p>
           {itemCount === 0 ? (
-            <button onClick={() => addToCart(id)}>Add</button>
+            <button onClick={() => addToCart(id)}>+</button>
           ) : (
             <button>
               <div className='iconalignment'>
