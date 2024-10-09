@@ -24,15 +24,34 @@ export const StoreContextProvider = (props) => {
         });
     };
 
-    useEffect(() => {
-        console.log(cartItem);
-    }, [cartItem]);
+    console.log(cartItem)
+
+    // useEffect(() => {
+    //     console.log(cartItem);
+    // }, [cartItem]);
+    const getCartAmountTotal = () => {
+        let amount = 0;
+        for (const item in cartItem) {
+            debugger
+            if (cartItem[item] > 0) {
+                console.log(cartItem[item])
+                let itemInfo = food_list.find((product) => product.name === item);
+                if (itemInfo) {
+                    debugger
+                    amount += itemInfo.price * cartItem[item]; // Multiply price by quantity
+                }
+            }
+        }
+        return amount;
+    };
+    
 
     const contextValue = {
         food_list,
         cartItem,
         addToCart,
         removeFromCart,
+        getCartAmountTotal
     };
 
     return (
